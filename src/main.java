@@ -8,15 +8,15 @@ public class main {
 		// TODO Auto-generated method stub
 		
 		LinkedListInt ll = new LinkedListInt();
-		ll.Append(1);
-		ll.Append(2);
+		// ll.Append(1);
+		// ll.Append(2);
 		
-		ll.RemoveTailElemnt();
+		ll.RemoveTailElement();
 		ll.RemoveGraterThan(6);
 		
-		System.out.wait();
 		
-		List a = new LinkedList();
+		
+		
 	
 		
 	}

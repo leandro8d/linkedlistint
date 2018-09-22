@@ -48,19 +48,21 @@ public class LinkedListInt implements ILinkedListInt {
 
 	// private method used to remove the elements.
 	private Node _RemoveTailElement(Node node, Node last) {
-
-		if (node.getNext() != null) {
-			return _RemoveTailElement(node.getNext(), node);
-		} else {
-			if (last != null) {
-				last.setNext(null);
-				return last;
+		if (node != null) {
+			if (node.getNext() != null) {
+				return _RemoveTailElement(node.getNext(), node);
 			} else {
-				// see if the first element from list is the tail element and remove it.
-				this.Root = null;
-				return this.Root;
+				if (last != null) {
+					last.setNext(null);
+					return last;
+				} else {
+					// see if the first element from list is the tail element and remove it.
+					this.Root = null;
+					return this.Root;
+				}
 			}
 		}
+		return node;
 	}
 
 	// private method used to get the last element from list.
